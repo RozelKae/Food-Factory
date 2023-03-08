@@ -7,14 +7,12 @@
   }
 }
 
-@mixin grid($cols, $gap) {
-  display: grid;
-  grid-template-columns: repeat($cols, 1fr);
-  grid-gap: ($gap);
-}
+
+
+
 
 @mixin mediaQuery($width) {
-  @media screen and (max-width: $width) {
+  @media screen and (min-width: $width) {
     @content;
   }
 }
@@ -41,21 +39,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: $height;
+  min-height: 1px;
 }
 
-@mixin centerBetween($height:1px) {
+@mixin centerBetween(){
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: $height;
 }
 
+
+@mixin grid($cols, $gap) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-gap: ($gap);
+}
 @mixin gridUneven($cols, $gap) {
   display: grid;
   grid-template-columns: $cols;
   grid-gap: ($gap);
 }
+
 
 @mixin imgFit($width: 1px, $height: 1px) {
   width: $width;

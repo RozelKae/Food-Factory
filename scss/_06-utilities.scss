@@ -9,9 +9,11 @@ $displays: flex, grid, block;
 $colors: (
   "primary": $clr-primary,
   "secondary": $clr-secondary,
-  "gray": $clr-light,
-  "light": $clr-dark,
-  "dark": $clr-gray,
+  "gray": $clr-gray,
+  "light": $clr-light,
+  "dark": $clr-dark,
+  "green": $clr-green,
+  "grayten": $clr-SemiG,
 );
 
 @each $key, $val in $colors {
